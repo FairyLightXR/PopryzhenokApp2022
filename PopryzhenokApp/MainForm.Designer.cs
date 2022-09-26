@@ -30,28 +30,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.DescChkBox = new System.Windows.Forms.CheckBox();
+            this.FilterCmb = new System.Windows.Forms.ComboBox();
+            this.SortCmb = new System.Windows.Forms.ComboBox();
+            this.SearchTxt = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(150)))), ((int)(((byte)(158)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.checkBox1);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.DescChkBox);
+            this.panel1.Controls.Add(this.FilterCmb);
+            this.panel1.Controls.Add(this.SortCmb);
+            this.panel1.Controls.Add(this.SearchTxt);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -60,6 +60,77 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1032, 100);
             this.panel1.TabIndex = 0;
+            // 
+            // DescChkBox
+            // 
+            this.DescChkBox.AutoSize = true;
+            this.DescChkBox.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DescChkBox.Location = new System.Drawing.Point(638, 60);
+            this.DescChkBox.Name = "DescChkBox";
+            this.DescChkBox.Size = new System.Drawing.Size(131, 24);
+            this.DescChkBox.TabIndex = 5;
+            this.DescChkBox.Text = "По убыванию";
+            this.DescChkBox.UseVisualStyleBackColor = true;
+            this.DescChkBox.CheckedChanged += new System.EventHandler(this.DescChkBox_CheckedChanged);
+            // 
+            // FilterCmb
+            // 
+            this.FilterCmb.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FilterCmb.FormattingEnabled = true;
+            this.FilterCmb.Location = new System.Drawing.Point(817, 58);
+            this.FilterCmb.Name = "FilterCmb";
+            this.FilterCmb.Size = new System.Drawing.Size(171, 28);
+            this.FilterCmb.TabIndex = 4;
+            this.FilterCmb.Text = "Фильтрация";
+            this.FilterCmb.SelectedIndexChanged += new System.EventHandler(this.FilterCmb_SelectedIndexChanged);
+            // 
+            // SortCmb
+            // 
+            this.SortCmb.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SortCmb.FormattingEnabled = true;
+            this.SortCmb.Items.AddRange(new object[] {
+            "Сортировка",
+            "По наименованию",
+            "По приоритету",
+            "По скидке"});
+            this.SortCmb.Location = new System.Drawing.Point(452, 60);
+            this.SortCmb.Name = "SortCmb";
+            this.SortCmb.Size = new System.Drawing.Size(163, 28);
+            this.SortCmb.TabIndex = 3;
+            this.SortCmb.Text = "Сортировка";
+            this.SortCmb.SelectedIndexChanged += new System.EventHandler(this.SortCmb_SelectedIndexChanged);
+            // 
+            // SearchTxt
+            // 
+            this.SearchTxt.BackColor = System.Drawing.SystemColors.Window;
+            this.SearchTxt.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SearchTxt.Location = new System.Drawing.Point(130, 60);
+            this.SearchTxt.Name = "SearchTxt";
+            this.SearchTxt.Size = new System.Drawing.Size(268, 28);
+            this.SearchTxt.TabIndex = 2;
+            this.SearchTxt.Text = "Введите для поиска";
+            this.SearchTxt.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SearchTxt_MouseClick);
+            this.SearchTxt.TextChanged += new System.EventHandler(this.SearchTxt_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(130, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(182, 27);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "ИС \"Попрыженок\"";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 96);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -89,66 +160,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1032, 376);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 96);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(130, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 27);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "ИС \"Попрыженок\"";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(130, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(268, 28);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "Введите для поиска";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(452, 60);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(163, 28);
-            this.comboBox1.TabIndex = 3;
-            this.comboBox1.Text = "Сортировка";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(817, 58);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(171, 28);
-            this.comboBox2.TabIndex = 4;
-            this.comboBox2.Text = "Фильтрация";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox1.Location = new System.Drawing.Point(638, 60);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(131, 24);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "По убыванию";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,8 +174,8 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -175,10 +186,10 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.CheckBox DescChkBox;
+        private System.Windows.Forms.ComboBox FilterCmb;
+        private System.Windows.Forms.ComboBox SortCmb;
+        private System.Windows.Forms.TextBox SearchTxt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
