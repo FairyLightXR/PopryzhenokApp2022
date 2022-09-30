@@ -117,7 +117,7 @@ namespace PopryzhenokApp
             AgentCard agentCard = sender as AgentCard;
             if (agentCard.BackColor == Color.White)
             {
-                agentCard.BackColor = Color.FromArgb(249, 150, 158);
+                agentCard.BackColor = Color.FromArgb(67, 220, 254);
                 SelectedAgentCard.Add(agentCard);
             }
             else
@@ -151,6 +151,17 @@ namespace PopryzhenokApp
         private void SearchTxt_MouseClick(object sender, MouseEventArgs e)
         {
             SearchTxt.Text = "";
+        }
+
+        //Unused
+        private void SearchTxt_TabIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void SearchTxt_Leave(object sender, EventArgs e)
+        {
+            SearchTxt.Text = "Введите для поиска";
         }
     }
 }
